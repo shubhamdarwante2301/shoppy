@@ -49,7 +49,7 @@ const AllProducts = () => {
   };
 
   return (
-    <div className="my-8">
+    <div className="my-8 mx-8">
       <div className="text-gray-600 mt-4 flex flex-wrap">
         {activeFilter.map((item) => {
           return (

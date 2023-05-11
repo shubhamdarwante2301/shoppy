@@ -13,6 +13,7 @@ const Navbar = ({ setSideCartOpen }) => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
+      console.log("currentUser",currentUser);
       setUser(currentUser);
     });
   }, []);
@@ -132,11 +133,12 @@ const Navbar = ({ setSideCartOpen }) => {
             <>
               <div className="ml-4 flex items-center relative group dropdown">
                 <Image
-                  src={avtarImg}
+                  // src={avtarImg}
+                  src={user.photoURL || avtarImg}
                   alt="Profile Photo"
                   width={40}
                   height={50}
-                  className="rounded-full border-2"
+                  className="rounded-full"
                 />
                 <p className="ml-1">
                   {user.displayName ||

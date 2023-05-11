@@ -32,7 +32,6 @@ const category = [
 ];
 
 export default function Home({ setOpenSideCart }) {
-  console.log("env val", process.env.NEXT_PUBLIC_API_KEY);
   return (
     <>
       <Head>
@@ -49,8 +48,8 @@ export default function Home({ setOpenSideCart }) {
           })}
         </section>
 
-        <section className="md:m-8">
-          <p className="text-3xl font-bold">PRODUCT OVERVIEW</p>
+        <section className="">
+          <p className="mx-8 text-3xl font-bold">PRODUCT OVERVIEW</p>
           <AllProducts />
         </section>
       </main>
